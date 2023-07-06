@@ -272,8 +272,8 @@ main{
   }
 
 .section {
-    margin-top: 30px; /* Agrega un margen superior de 20px */
-    padding-top: 30px; /* Agrega un padding superior de 20px */
+    margin-top: 10vh; /* Agrega un margen superior de 20px */
+    padding-top: 10vh; /* Agrega un padding superior de 20px */
   }
 
 .img {
