@@ -260,6 +260,66 @@ main{
         right: -20px;
     }
 }
+/* Mis cambios desde AQUI */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    grid-gap: 20px; /* Espacio entre columnas */
+  }
+  
+  .content {
+    grid-column: span 2; /* Ocupa las dos columnas */
+  }
+
+.section {
+    margin-top: 30px; /* Agrega un margen superior de 20px */
+    padding-top: 30px; /* Agrega un padding superior de 20px */
+  }
+
+.img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+.iframe {
+    max-width: 100%;
+  }
+
+/* styles.css */
+
+.buttons__cover a {
+    text-decoration: none; /* Elimina la decoración de texto solo para los enlaces dentro de .buttons__cover */
+  }
+  
+
+
+
+/* Estilos responsive */
+
+@media screen and (max-width: 600px) {
+    .container {
+      grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    section {
+      margin-top: 10px; /* Redefine el margen superior en pantallas más pequeñas */
+      padding-top: 10px; /* Redefine el padding superior en pantallas más pequeñas */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    iframe {
+      max-width: 100%;
+    }
+}
+
 
 @media (max-width: 920px){
     .text__information-cover{
