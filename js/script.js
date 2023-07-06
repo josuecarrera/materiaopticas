@@ -13,3 +13,22 @@ window.onscroll = function () {
     elemento1.style.bottom = posicion * 0.1 + "px";
     elemento2.style.top = posicion * 0.1 + "px";
 }
+
+window.onscroll = function() {
+    showScrollTopButton();
+  };
+  
+  function showScrollTopButton() {
+    var button = document.getElementById("scrollTopButton");
+    if (document.documentElement.scrollTop > 300 || document.body.scrollTop > 300) {
+      button.classList.add("show");
+    } else {
+      button.classList.remove("show");
+    }
+  }
+  
+  function scrollToTop() {
+    document.documentElement.scrollTop = 0; // Para navegadores que soportan scrollTop
+    document.body.scrollTop = 0; // Para navegadores que no soportan scrollTop
+  }
+  
