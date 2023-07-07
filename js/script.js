@@ -18,17 +18,47 @@ window.onscroll = function() {
     showScrollTopButton();
   };
   
-  function showScrollTopButton() {
+function showScrollTopButton() {
     var button = document.getElementById("scrollTopButton");
     if (document.documentElement.scrollTop > 300 || document.body.scrollTop > 300) {
       button.classList.add("show");
     } else {
       button.classList.remove("show");
     }
-  }
+}
   
-  function scrollToTop() {
+function scrollToTop() {
     document.documentElement.scrollTop = 0; // Para navegadores que soportan scrollTop
     document.body.scrollTop = 0; // Para navegadores que no soportan scrollTop
-  }
+}
   
+
+window.addEventListener("scroll", function() {
+    var footer = document.getElementById("footer");
+    var scrollPosition = window.innerHeight + window.pageYOffset;
+    var pageHeight = document.documentElement.scrollHeight;
+    
+    if (scrollPosition >= pageHeight) {
+      footer.style.display = "block";
+    } else {
+      footer.style.display = "none";
+    }
+});
+
+
+function openPDF() {
+  var pdfURL = "/files/R10_Josue_Carrera.pdf"; // Reemplaza con la ruta correcta de tu archivo PDF
+  
+  // Abre el PDF en una nueva ventana o pestaña
+  window.open(pdfURL, "_blank");
+}
+
+function downloadPDF() {
+  var pdfURL = "/files/R10_Josue_Carrera.pdf"; // Reemplaza con la ruta correcta de tu archivo PDF
+  
+  // Descarga el PDF
+  var link = document.createElement("a");
+  link.href = pdfURL;
+  link.download = "prueba1.pdf"; // Reemplaza con el nombre que desees para el archivo descargado
+  link.click();
+}

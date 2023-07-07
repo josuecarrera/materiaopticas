@@ -289,7 +289,55 @@ main{
 
 .buttons__cover a {
     text-decoration: none; /* Elimina la decoración de texto solo para los enlaces dentro de .buttons__cover */
-  }
+}
+  
+
+.dropdown {
+    position: relative;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+}
+  
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+.footer {
+    background-color: #DEE2E6;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px; /* Ajusta la altura deseada */
+}
+  
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+  
+
   
 
 
