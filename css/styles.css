@@ -10,6 +10,8 @@
 
 body{
     background: #F5F5F5;
+    margin: 0;
+    padding: 0;
 }
 
 header{
@@ -102,10 +104,10 @@ main{
     margin-top: 40px;
 }
 
-.buttons__cover{
+/* .buttons__cover{
     display: flex;
     margin-top: 40px;
-}
+} */
 
 .btn__readMore-cover{
     padding: 14px 40px;
@@ -262,30 +264,66 @@ main{
 }
 /* Mis cambios desde AQUI */
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    /* display: grid; */
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas responsivas */
     grid-gap: 20px; /* Espacio entre columnas */
+    justify-items: center; /* Centra los elementos horizontalmente en las columnas */
+    align-items: center; /* Centra los elementos verticalmente en las filas */
   }
   
-  .content {
-    grid-column: span 2; /* Ocupa las dos columnas */
+.content {
+    margin-top: 20px;
+  display: grid;
+  
+  grid-gap: 20px; /* Espacio entre columnas */
+}
+
+.text-container {
+    text-align: center;
   }
+  
+.image-container {
+    text-align: center;
+    padding: 3vh;
+}
+  
+.video-container {
+    text-align: center;
+}
+
+
+
+.content p {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+  
 
 .section {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height:auto;
     margin-top: 10vh; /* Agrega un margen superior de 20px */
     padding-top: 10vh; /* Agrega un padding superior de 20px */
-  }
+}
 
 .img {
     max-width: 100%;
     height: auto;
-  }
+}
   
 .iframe {
     max-width: 100%;
-  }
+}
 
 /* styles.css */
+
+.buttons__cover {
+    margin-top: 20px;
+    text-align: center;
+}
 
 .buttons__cover a {
     text-decoration: none; /* Elimina la decoración de texto solo para los enlaces dentro de .buttons__cover */
@@ -337,7 +375,17 @@ main{
     margin: 0 auto;
 }
   
-
+.ul-item {
+    list-style-type: disc; /* Tipo de viñeta */
+    padding-left: revert; /* Espacio a la izquierda de la lista */
+    display: flex; /* Utiliza el modelo flexbox */
+    flex-direction: column; /* Coloca los elementos en una columna */
+    align-items: flex-start; /* Centra verticalmente los elementos */
+}
+  
+li {
+    margin-bottom: 20px; /* Espacio entre elementos de la lista */
+}
   
 
 
@@ -388,6 +436,12 @@ main{
     }
 }
 
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .section {
+      flex-direction: column;
+    }
+}
 
 @media (max-width: 920px){
     .text__information-cover{

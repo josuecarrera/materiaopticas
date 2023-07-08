@@ -47,14 +47,14 @@ window.addEventListener("scroll", function() {
 
 
 function openPDF() {
-  var pdfURL = "/files/R10_Josue_Carrera.pdf"; // Reemplaza con la ruta correcta de tu archivo PDF
+  var pdfURL = "/files/capone/RESUMEN CAPITULO I.pdf"; // Reemplaza con la ruta correcta de tu archivo PDF
   
   // Abre el PDF en una nueva ventana o pestaña
   window.open(pdfURL, "_blank");
 }
 
 function downloadPDF() {
-  var pdfURL = "/files/R10_Josue_Carrera.pdf"; // Reemplaza con la ruta correcta de tu archivo PDF
+  var pdfURL = "/files/capone/RESUMEN CAPITULO I.pdf"; // Reemplaza con la ruta correcta de tu archivo PDF
   
   // Descarga el PDF
   var link = document.createElement("a");
